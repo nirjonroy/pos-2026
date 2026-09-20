@@ -29,6 +29,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     require __DIR__.'/product.php';
     require __DIR__.'/purchase.php';
+    require __DIR__.'/inventory.php';
 });
 
 Route::middleware('auth')->group(function () {

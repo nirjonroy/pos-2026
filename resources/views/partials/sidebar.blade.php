@@ -18,9 +18,9 @@
         [
             'label' => 'Inventory',
             'items' => [
-                ['label' => 'Stock', 'route' => null, 'active' => 'inventory.stock.*'],
-                ['label' => 'Stock Adjustments', 'route' => null, 'active' => 'inventory.adjustments.*'],
-                ['label' => 'Stock Transfers', 'route' => null, 'active' => 'inventory.transfers.*'],
+                ['label' => 'Stock', 'route' => 'inventory.index', 'active' => 'inventory.*'],
+                ['label' => 'Stock Adjustments', 'route' => 'stock-adjustments.index', 'active' => 'stock-adjustments.*'],
+                ['label' => 'Stock Transfers', 'route' => 'stock-transfers.index', 'active' => 'stock-transfers.*'],
             ],
         ],
         [
