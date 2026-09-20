@@ -40,7 +40,7 @@
         [
             'items' => [
                 ['label' => 'Customers', 'route' => 'customers.index', 'active' => 'customers.*'],
-                ['label' => 'Expenses', 'route' => null, 'active' => 'expenses.*'],
+                ['label' => 'Expenses', 'route' => 'expenses.index', 'active' => 'expenses.*|expense-categories.*|accounting.*'],
                 ['label' => 'Employees', 'route' => null, 'active' => 'employees.*'],
                 ['label' => 'Reports', 'route' => null, 'active' => 'reports.*'],
                 ['label' => 'Settings', 'route' => null, 'active' => 'settings.*'],
