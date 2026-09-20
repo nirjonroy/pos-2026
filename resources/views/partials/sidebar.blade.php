@@ -9,10 +9,10 @@
         [
             'label' => 'Products',
             'items' => [
-                ['label' => 'Products', 'route' => null, 'active' => 'products.*'],
-                ['label' => 'Categories', 'route' => null, 'active' => 'categories.*'],
-                ['label' => 'Brands', 'route' => null, 'active' => 'brands.*'],
-                ['label' => 'Units', 'route' => null, 'active' => 'units.*'],
+                ['label' => 'Products', 'route' => 'products.index', 'active' => 'products.*'],
+                ['label' => 'Categories', 'route' => 'categories.index', 'active' => 'categories.*'],
+                ['label' => 'Brands', 'route' => 'brands.index', 'active' => 'brands.*'],
+                ['label' => 'Units', 'route' => 'units.index', 'active' => 'units.*'],
             ],
         ],
         [
