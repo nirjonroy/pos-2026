@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard.index');
     })->name('dashboard');
 
     Route::get('/pos', function () {
