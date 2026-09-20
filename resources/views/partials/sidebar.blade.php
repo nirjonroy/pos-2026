@@ -26,7 +26,7 @@
         [
             'label' => 'Purchases',
             'items' => [
-                ['label' => 'Purchases', 'route' => null, 'active' => 'purchases.*'],
+                ['label' => 'Purchases', 'route' => 'purchases.index', 'active' => 'purchases.*'],
                 ['label' => 'Suppliers', 'route' => 'suppliers.index', 'active' => 'suppliers.*'],
             ],
         ],
