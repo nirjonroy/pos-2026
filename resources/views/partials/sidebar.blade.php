@@ -27,7 +27,7 @@
             'label' => 'Purchases',
             'items' => [
                 ['label' => 'Purchases', 'route' => null, 'active' => 'purchases.*'],
-                ['label' => 'Suppliers', 'route' => null, 'active' => 'suppliers.*'],
+                ['label' => 'Suppliers', 'route' => 'suppliers.index', 'active' => 'suppliers.*'],
             ],
         ],
         [
@@ -39,7 +39,7 @@
         ],
         [
             'items' => [
-                ['label' => 'Customers', 'route' => null, 'active' => 'customers.*'],
+                ['label' => 'Customers', 'route' => 'customers.index', 'active' => 'customers.*'],
                 ['label' => 'Expenses', 'route' => null, 'active' => 'expenses.*'],
                 ['label' => 'Employees', 'route' => null, 'active' => 'employees.*'],
                 ['label' => 'Reports', 'route' => null, 'active' => 'reports.*'],
