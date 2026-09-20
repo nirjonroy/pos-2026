@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Sales\PosController;
+use App\Http\Controllers\Sales\SaleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +25,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('dashboard.index');
     })->name('dashboard');
 
-    Route::get('/pos', function () {
-        return view('pos.index');
-    })->name('pos.index');
+    Route::get('/pos', [PosController::class, 'index'])->name('pos.index');
+    Route::get('/pos/products', [PosController::class, 'products'])->name('pos.products');
+    Route::post('/pos/checkout', [PosController::class, 'checkout'])->name('pos.checkout');
+    Route::get('/sales/{sale}/receipt', [SaleController::class, 'receipt'])->name('sales.receipt');
 
     require __DIR__.'/product.php';
     require __DIR__.'/purchase.php';
