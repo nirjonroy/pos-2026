@@ -14,6 +14,7 @@ class UpdateCustomerRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'customer_group_id' => ['nullable', 'exists:customer_groups,id'],
             'name' => ['required', 'string', 'max:255'],
             'phone' => ['nullable', 'string', 'max:255'],
             'email' => ['nullable', 'email', 'max:255'],

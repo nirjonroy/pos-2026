@@ -20,6 +20,17 @@
     </div>
 
     <div>
+        <label for="customer_group_id" class="block text-sm font-medium text-gray-700">Customer Group</label>
+        <select id="customer_group_id" name="customer_group_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+            <option value="">No group</option>
+            @foreach ($customerGroups ?? [] as $group)
+                <option value="{{ $group->id }}" @selected((string) old('customer_group_id', $customer->customer_group_id ?? '') === (string) $group->id)>{{ $group->name }}</option>
+            @endforeach
+        </select>
+        @include('products.partials.field-error', ['name' => 'customer_group_id'])
+    </div>
+
+    <div>
         <label for="credit_limit" class="block text-sm font-medium text-gray-700">Credit Limit</label>
         <input id="credit_limit" name="credit_limit" type="number" step="0.01" min="0" value="{{ old('credit_limit', $customer->credit_limit ?? '0.00') }}" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
         @include('products.partials.field-error', ['name' => 'credit_limit'])
