@@ -33,7 +33,7 @@
         [
             'label' => 'Sales',
             'items' => [
-                ['label' => 'Sales', 'route' => null, 'active' => 'sales.*'],
+                ['label' => 'Sales', 'route' => 'sales.index', 'active' => 'sales.*'],
                 ['label' => 'Returns', 'route' => null, 'active' => 'returns.*'],
             ],
         ],

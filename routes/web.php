@@ -28,11 +28,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/pos', [PosController::class, 'index'])->name('pos.index');
     Route::get('/pos/products', [PosController::class, 'products'])->name('pos.products');
     Route::post('/pos/checkout', [PosController::class, 'checkout'])->name('pos.checkout');
-    Route::get('/sales/{sale}/receipt', [SaleController::class, 'receipt'])->name('sales.receipt');
 
     require __DIR__.'/product.php';
     require __DIR__.'/purchase.php';
     require __DIR__.'/inventory.php';
+    require __DIR__.'/sales.php';
 });
 
 Route::middleware('auth')->group(function () {
