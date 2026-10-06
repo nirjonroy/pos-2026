@@ -6,7 +6,14 @@
         @csrf
 
         <!-- Email Address -->
+        <div style="background-color: #ee2a2a; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center; color: white; font-family: Arial, sans-serif; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+        ">
+            <h1> Login Credentials</h1>
+            <h3> admin@gmail.com</h3>
+            <h3> 12345678</h3>
+        </div>
         <div>
+            
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
